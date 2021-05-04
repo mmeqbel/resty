@@ -10,10 +10,14 @@ class Form extends React.Component {
   }
   formHandler = (event) => {
     event.preventDefault();
-    const url = event.target.url.value;
-    const method = event.target.method.value;
-
-    this.getData(url)
+    try {
+      const url = event.target.url.value;
+      const method = event.target.method.value;
+      this.getData(url)
+      
+    } catch (error) {
+      
+    }
 
   }
   getData = async (url) => {
